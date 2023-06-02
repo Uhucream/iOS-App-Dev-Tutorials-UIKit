@@ -67,8 +67,10 @@ extension ReminderListViewController {
         
         let image: UIImage? = .init(systemName: symbolName, withConfiguration: symbolConfiguration)
         
-        let button: UIButton = .init()
+        let button: ReminderDoneButton = .init()
         
+        button.addTarget(self, action: #selector(didPressDoneButton(_:)), for: .touchUpInside)
+        button.id = reminder.id
         button.setImage(image, for: .normal)
         
         return .init(customView: button, placement: .leading(displayed: .always))
