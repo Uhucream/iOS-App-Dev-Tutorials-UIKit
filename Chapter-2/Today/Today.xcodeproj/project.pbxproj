@@ -12,6 +12,7 @@
 		470BC8862A29A63100A84684 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 470BC8832A29A63000A84684 /* LICENSE.txt */; };
 		470BC88A2A29A6C900A84684 /* UIColor+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BC8892A29A6C900A84684 /* UIColor+Today.swift */; };
 		470BC88C2A29A73900A84684 /* Date+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BC88B2A29A73900A84684 /* Date+Today.swift */; };
+		470BC88F2A29AA5D00A84684 /* ReminderListViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BC88E2A29AA5D00A84684 /* ReminderListViewController+DataSource.swift */; };
 		4746FF292A29827200AA58C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746FF282A29827200AA58C3 /* AppDelegate.swift */; };
 		4746FF2B2A29827200AA58C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746FF2A2A29827200AA58C3 /* SceneDelegate.swift */; };
 		4746FF2D2A29827200AA58C3 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746FF2C2A29827200AA58C3 /* ReminderListViewController.swift */; };
@@ -27,6 +28,7 @@
 		470BC8832A29A63000A84684 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		470BC8892A29A6C900A84684 /* UIColor+Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Today.swift"; sourceTree = "<group>"; };
 		470BC88B2A29A73900A84684 /* Date+Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Today.swift"; sourceTree = "<group>"; };
+		470BC88E2A29AA5D00A84684 /* ReminderListViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+DataSource.swift"; sourceTree = "<group>"; };
 		4746FF252A29827200AA58C3 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4746FF282A29827200AA58C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4746FF2A2A29827200AA58C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,15 @@
 			path = LICENSE;
 			sourceTree = SOURCE_ROOT;
 		};
+		470BC88D2A29AA3800A84684 /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4746FF2C2A29827200AA58C3 /* ReminderListViewController.swift */,
+				470BC88E2A29AA5D00A84684 /* ReminderListViewController+DataSource.swift */,
+			);
+			path = ListViewController;
+			sourceTree = "<group>";
+		};
 		4746FF1C2A29827200AA58C3 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +101,7 @@
 				4746FF3C2A2986EC00AA58C3 /* Models */,
 				4746FF282A29827200AA58C3 /* AppDelegate.swift */,
 				4746FF2A2A29827200AA58C3 /* SceneDelegate.swift */,
-				4746FF2C2A29827200AA58C3 /* ReminderListViewController.swift */,
+				470BC88D2A29AA3800A84684 /* ListViewController */,
 				4746FF2E2A29827200AA58C3 /* Main.storyboard */,
 				4746FF312A29827400AA58C3 /* Assets.xcassets */,
 				4746FF332A29827400AA58C3 /* LaunchScreen.storyboard */,
@@ -187,6 +198,7 @@
 				4746FF292A29827200AA58C3 /* AppDelegate.swift in Sources */,
 				470BC88A2A29A6C900A84684 /* UIColor+Today.swift in Sources */,
 				470BC88C2A29A73900A84684 /* Date+Today.swift in Sources */,
+				470BC88F2A29AA5D00A84684 /* ReminderListViewController+DataSource.swift in Sources */,
 				4746FF2B2A29827200AA58C3 /* SceneDelegate.swift in Sources */,
 				4746FF3E2A29870B00AA58C3 /* Reminder.swift in Sources */,
 			);
