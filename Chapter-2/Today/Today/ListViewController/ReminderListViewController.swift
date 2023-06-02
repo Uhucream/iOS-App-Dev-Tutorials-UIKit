@@ -35,9 +35,9 @@ class ReminderListViewController: UICollectionViewController {
         
         snapshot.appendSections([0])
         
-        let reminderTitles: [String] = Reminder.sampleData.map { $0.id }
+        let reminderIds: [String] = reminders.map { $0.id }
         
-        snapshot.appendItems(reminderTitles)
+        snapshot.appendItems(reminderIds)
         
         dataSource.apply(snapshot)
         
