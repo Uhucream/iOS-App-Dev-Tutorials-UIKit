@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ReminderListViewController.swift
 //  
 //  
 //  Created by TakashiUshikoshi on 2023/06/02
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ReminderListViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
