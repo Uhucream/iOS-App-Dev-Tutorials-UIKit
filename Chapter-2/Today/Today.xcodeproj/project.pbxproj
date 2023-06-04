@@ -20,6 +20,7 @@
 		4746FF322A29827400AA58C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4746FF312A29827400AA58C3 /* Assets.xcassets */; };
 		4746FF352A29827400AA58C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4746FF332A29827400AA58C3 /* LaunchScreen.storyboard */; };
 		4746FF3E2A29870B00AA58C3 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746FF3D2A29870B00AA58C3 /* Reminder.swift */; };
+		475E5F4A2A2C245C00B2054D /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E5F492A2C245C00B2054D /* ReminderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		4746FF342A29827400AA58C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4746FF362A29827400AA58C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4746FF3D2A29870B00AA58C3 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		475E5F492A2C245C00B2054D /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				4746FF3C2A2986EC00AA58C3 /* Models */,
 				4746FF282A29827200AA58C3 /* AppDelegate.swift */,
 				4746FF2A2A29827200AA58C3 /* SceneDelegate.swift */,
+				475E5F492A2C245C00B2054D /* ReminderViewController.swift */,
 				470BC88D2A29AA3800A84684 /* ListViewController */,
 				4746FF2E2A29827200AA58C3 /* Main.storyboard */,
 				4746FF312A29827400AA58C3 /* Assets.xcassets */,
@@ -198,6 +201,7 @@
 				4746FF292A29827200AA58C3 /* AppDelegate.swift in Sources */,
 				470BC88A2A29A6C900A84684 /* UIColor+Today.swift in Sources */,
 				470BC88C2A29A73900A84684 /* Date+Today.swift in Sources */,
+				475E5F4A2A2C245C00B2054D /* ReminderViewController.swift in Sources */,
 				470BC88F2A29AA5D00A84684 /* ReminderListViewController+DataSource.swift in Sources */,
 				4746FF2B2A29827200AA58C3 /* SceneDelegate.swift in Sources */,
 				4746FF3E2A29870B00AA58C3 /* Reminder.swift in Sources */,
