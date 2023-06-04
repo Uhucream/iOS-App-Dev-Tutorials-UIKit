@@ -46,6 +46,12 @@ class ReminderViewController: UICollectionViewController {
             )
         }
         
+        if #available(iOS 16, *) {
+            self.navigationItem.style = .navigator
+        }
+
+        self.navigationItem.title = NSLocalizedString("Reminder", comment: "Reminder view controller title")
+        
         self.updateSnapshot()
     }
     
