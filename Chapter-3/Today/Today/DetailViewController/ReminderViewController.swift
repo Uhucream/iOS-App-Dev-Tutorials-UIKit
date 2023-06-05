@@ -76,15 +76,15 @@ class ReminderViewController: UICollectionViewController {
     ) {
         let section: Section = section(for: indexPath)
         
-        if case .header(let title) = row {
+        switch (section, row) {
+        case (_, .header(let title)):
             var contentConfiguration = cell.defaultContentConfiguration()
             
             contentConfiguration.text = title
             
             cell.contentConfiguration = contentConfiguration
-        }
-        
-        if section == .view {
+
+        case (.view, _):
             var contentConfiguration = cell.defaultContentConfiguration()
             
             contentConfiguration.text = text(for: row)
@@ -93,6 +93,9 @@ class ReminderViewController: UICollectionViewController {
             contentConfiguration.image = row.image
             
             cell.contentConfiguration = contentConfiguration
+
+        default:
+            fatalError("Unexpected combination of section and row.")
         }
 
         cell.tintColor = .todayPrimaryTint
