@@ -22,6 +22,7 @@ class ReminderViewController: UICollectionViewController {
         var listConfiguration: UICollectionLayoutListConfiguration = .init(appearance: .insetGrouped)
         
         listConfiguration.showsSeparators = false
+        listConfiguration.headerMode = .firstItemInSection
         
         let listLayout: UICollectionViewCompositionalLayout = .list(using: listConfiguration)
         
@@ -75,6 +76,14 @@ class ReminderViewController: UICollectionViewController {
     ) {
         let section: Section = section(for: indexPath)
         
+        if case .header(let title) = row {
+            var contentConfiguration = cell.defaultContentConfiguration()
+            
+            contentConfiguration.text = title
+            
+            cell.contentConfiguration = contentConfiguration
+        }
+        
         if section == .view {
             var contentConfiguration = cell.defaultContentConfiguration()
             
@@ -102,6 +111,9 @@ class ReminderViewController: UICollectionViewController {
             
         case .title:
             return self.reminder.title
+            
+        default:
+            return nil
         }
     }
     
@@ -110,6 +122,10 @@ class ReminderViewController: UICollectionViewController {
         
         snapshot.appendSections([.title, .date, .notes])
         
+        snapshot.appendItems([.header(Section.title.name)], toSection: .title)
+        snapshot.appendItems([.header(Section.date.name)], toSection: .date)
+        snapshot.appendItems([.header(Section.notes.name)], toSection: .notes)
+        
         dataSource.apply(snapshot)
     }
     
@@ -117,7 +133,16 @@ class ReminderViewController: UICollectionViewController {
         var snapshot: Snapshot = .init()
         
         snapshot.appendSections([.view])
-        snapshot.appendItems([Row.title, Row.date, Row.time, Row.notes], toSection: .view)
+        snapshot.appendItems(
+            [
+                Row.header(""),
+                Row.title,
+                Row.date,
+                Row.time,
+                Row.notes
+            ],
+            toSection: .view
+        )
         
         dataSource.apply(snapshot)
     }
