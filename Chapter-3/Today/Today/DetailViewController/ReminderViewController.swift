@@ -52,7 +52,7 @@ class ReminderViewController: UICollectionViewController {
 
         self.navigationItem.title = NSLocalizedString("Reminder", comment: "Reminder view controller title")
         
-        self.updateSnapshot()
+        self.updateSnapshotForViewing()
     }
     
     func cellRegistrationHandler(
@@ -60,15 +60,19 @@ class ReminderViewController: UICollectionViewController {
         indexPath: IndexPath,
         row: Row
     ) {
-        var contentConfiguration = cell.defaultContentConfiguration()
+        let section: Section = section(for: indexPath)
         
-        contentConfiguration.text = text(for: row)
-        contentConfiguration.textProperties.font = .preferredFont(forTextStyle: row.textStyle)
+        if section == .view {
+            var contentConfiguration = cell.defaultContentConfiguration()
+            
+            contentConfiguration.text = text(for: row)
+            contentConfiguration.textProperties.font = .preferredFont(forTextStyle: row.textStyle)
+            
+            contentConfiguration.image = row.image
+            
+            cell.contentConfiguration = contentConfiguration
+        }
 
-        contentConfiguration.image = row.image
-        
-        cell.contentConfiguration = contentConfiguration
-        
         cell.tintColor = .todayPrimaryTint
     }
 
@@ -88,7 +92,15 @@ class ReminderViewController: UICollectionViewController {
         }
     }
     
-    private func updateSnapshot() {
+    private func updateSnapshotForEditing() {
+        var snapshot: Snapshot = .init()
+        
+        snapshot.appendSections([.title, .date, .notes])
+        
+        dataSource.apply(snapshot)
+    }
+    
+    private func updateSnapshotForViewing() {
         var snapshot: Snapshot = .init()
         
         snapshot.appendSections([.view])
